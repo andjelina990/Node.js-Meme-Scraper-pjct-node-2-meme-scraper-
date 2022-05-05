@@ -6,3 +6,6 @@ yarn-error.log*
 .eslintcache
 *.tsbuildinfo
 Memes/
+
+*.tsbuildinfo
+*.tsbuildinfo
