@@ -1,8 +1,5 @@
 import fetch from 'node-fetch';
 import https from 'node:https';
-
-// import DownloaderHelper
-
 import * as fs from 'node:fs';
 
 // let url = 'https://memegen-link-examples-upleveled.netlify.app/';
@@ -34,11 +31,7 @@ fs.access(path, (error) => {
     // If current directory does not exist
     // then create it
     fs.mkdir(path, () => {
-      if (error) {
-        console.log(error);
-      } else {
-        console.log('New Directory created successfully !!');
-      }
+      console.log('New Directory created successfully !!');
     });
   } else {
     console.log('Given Directory already exists !!');
@@ -63,16 +56,16 @@ for (let j = 0; j < 10; j++) {
     const fileName = `memes/0${j + 1}.jpg`;
     console.log(fileName);
     const file = fs.createWriteStream(fileName);
-    https.get(urls[j], function (response) {
-      response.pipe(file);
+    https.get(urls[j], function (answer) {
+      answer.pipe(file);
     });
   } else {
-    fs.mkdir('./memes', { recursive: true }, function (err) {});
+    fs.mkdir('./memes', { recursive: true }, function () {});
     const fileName = `memes/${j + 1}.jpg`;
     console.log(fileName);
     const file = fs.createWriteStream(fileName);
-    https.get(urls[j], function (response) {
-      response.pipe(file);
+    https.get(urls[j], function (answer) {
+      answer.pipe(file);
     });
   }
 }

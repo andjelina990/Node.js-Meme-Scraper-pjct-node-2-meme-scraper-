@@ -42,8 +42,6 @@
     "@typescript-eslint/utils": "5.22.0"
   },
   "dependencies": {
-    "axios": "^0.27.2",
-    "cheerio": "^1.0.0-rc.10",
     "node-fetch": "^3.2.4",
     "puppeteer": "^13.7.0"
   }
